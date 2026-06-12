@@ -122,8 +122,13 @@ def display_meal(meals, allergy_list):
 # 제목
 # ==========================
 
-st.title(
-    "🍽️ 급식 알레르기 확인 앱"
+st.markdown(
+    """
+    <h2 style="text-align:center;">
+    🍽️ 장애학생 급식 알레르기 확인 앱
+    </h2>
+    """,
+    unsafe_allow_html=True
 )
 
 st.write(
