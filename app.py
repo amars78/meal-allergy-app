@@ -17,12 +17,13 @@ st.set_page_config(
 # 학교 정보 설정
 # ==========================
 
-# NEIS API 인증키
-API_KEY = "8aa08404167c443f9e6a3709f8126655"
-# 교육청 코드
-ATPT_OFCDC_SC_CODE = "B10"  #서울시교육청
-# 학교 코드
-SD_SCHUL_CODE = "7010200"  #송곡여고 코드
+API_KEY = st.secrets["API_KEY"]
+
+ATPT_OFCDC_SC_CODE = st.secrets["ATPT_OFCDC_SC_CODE"]
+
+SD_SCHUL_CODE = st.secrets["SD_SCHUL_CODE"]
+
+
 # ==========================
 # 급식 가져오기
 # ==========================
