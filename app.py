@@ -125,7 +125,7 @@ def display_meal(meals, allergy_list):
 st.markdown(
     """
     <h2 style="text-align:center;">
-    🍽️ 급식 알레르기 확인 앱
+    🍽️ 송곡여고 급식 알레르기 확인
     </h2>
     """,
     unsafe_allow_html=True
