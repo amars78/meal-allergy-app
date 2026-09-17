@@ -125,16 +125,13 @@ def display_meal(meals, allergy_list):
 st.markdown(
     """
     <h2 style="text-align:center;">
-    🍽️ 송곡여고 급식 알레르기 확인
+    🍽️ 송곡여고 오늘의 급식
     </h2>
     """,
     unsafe_allow_html=True
 )
 
-st.write(
-    "오늘 급식을 확인하고 "
-    "알레르기 위험 음식을 찾아줍니다."
-)
+
 
 # ==========================
 # 오늘 날짜 급식
@@ -169,54 +166,6 @@ else:
         "오늘 급식 정보가 없습니다."
     )
 
-# ==========================
-# 알레르기 입력
-# ==========================
-
-st.divider()
-st.header(
-    "⚠️ 알레르기 검사"
-)
-
-allergy_input = st.text_input(
-    "알레르기 정보를 입력하세요",
-    placeholder="예) 계란, 우유, 땅콩"
-)
-
-if st.button(
-    "🔍 알레르기 검사하기"
-):
-    if allergy_input.strip() == "":
-        st.warning(
-            "알레르기 정보를 입력해주세요."
-        )
-    else:
-        st.session_state.allergy = [
-            x.strip()
-            for x in allergy_input.split(",")
-        ]
-        st.session_state.checked = True
-        st.rerun()
-
-# ==========================
-# 검사 결과
-# ==========================
-
-if st.session_state.checked:
-    st.divider()
-    if danger:
-        st.error(
-            f"""
-            ⚠️ 알레르기 위험 음식이 발견되었습니다.
-
-            확인한 알레르기:
-            {", ".join(st.session_state.allergy)}
-            """
-        )
-    else:
-        st.success(
-            "✅ 알레르기 위험 음식이 없습니다."
-        )
 
 st.divider()
 st.caption(
