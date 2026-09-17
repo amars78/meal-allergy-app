@@ -125,7 +125,7 @@ def display_meal(meals, allergy_list):
 st.markdown(
     """
     <h2 style="text-align:center;">
-    🍽️ 송곡여고 오늘의 급식
+    🍽️ 송곡여자고등학교 급식메뉴
     </h2>
     """,
     unsafe_allow_html=True
